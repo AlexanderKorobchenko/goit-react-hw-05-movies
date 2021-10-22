@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import s from './Home.module.css';
 
 const trendingURL = `https://api.themoviedb.org/3/trending/movie/day?api_key=47af3f3eb3cebf089eb55cbdac9542a5`;
@@ -21,9 +21,9 @@ function Home() {
         {movies.map(movie => {
           return (
             <li key={movie.id} className={s.item}>
-              <NavLink to="/movies" className={s.link}>
+              <Link to={`/movies/${movie.id}`} className={s.link}>
                 {movie.title}
-              </NavLink>
+              </Link>
             </li>
           );
         })}

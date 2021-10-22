@@ -1,0 +1,35 @@
+.card {
+  padding: 16px;
+  display: flex;
+}
+
+.imageContainer {
+  width: 240px;
+  height: 360px;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.image {
+  width: 240px;
+  height: 360px;
+}
+
+.contentContainer {
+  max-width: 600px;
+  padding: 0px 30px;
+}
+
+.title {
+  text-align: center;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.genres {
+  font-size: 14px;
+  margin: 4px 0px;
+}
