@@ -21,15 +21,24 @@
   padding: 0px 30px;
 }
 
-.title {
-  text-align: center;
-}
-
 .description {
   font-size: 14px;
 }
 
-.genres {
-  font-size: 14px;
-  margin: 4px 0px;
+.additional {
+  width: 100%;
+  padding-left: 16px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.link {
+  color: #000;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #ff6b08;
+  cursor: pointer;
+  text-decoration: underline;
 }

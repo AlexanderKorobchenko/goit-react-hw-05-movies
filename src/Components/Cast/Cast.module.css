@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  padding-left: 16px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.item {
+  height: max-content;
+  /* position: relative; */
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  flex-basis: calc(100% / 5 - 20px);
+  /* border-radius: 10px; */
+  filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.7));
+  overflow: hidden;
+}
+
+.image {
+  width: 190px;
+  border-radius: 10px;
+}
