@@ -1,9 +1,16 @@
 import { useState, useEffect } from 'react';
-import { useRouteMatch, useParams, NavLink, Route } from 'react-router-dom';
+import {
+  useRouteMatch,
+  useParams,
+  useHistory,
+  NavLink,
+  Route,
+} from 'react-router-dom';
 import s from './MovieDetailsPage.module.css';
 import defaultImage from '../../images/no-image-available.jpg';
 import Cast from '../../Components/Cast';
 import Reviews from '../../Components/Reviews';
+import Button from '../../Components/Button/Button';
 
 function makeIdURL(id) {
   return `https://api.themoviedb.org/3/movie/${id}?api_key=47af3f3eb3cebf089eb55cbdac9542a5&language=en-US`;
@@ -19,6 +26,7 @@ const defaultObject = {
 };
 
 function MovieDetailsPage() {
+  const history = useHistory();
   const { url } = useRouteMatch();
   const { movieId } = useParams();
   const [movie, setMovie] = useState(defaultObject);
@@ -34,8 +42,19 @@ function MovieDetailsPage() {
   //     console.log('movie: ', movie);
   //   }, [movie]);
 
+  function goBack() {
+    const valueURL = history.location.pathname;
+
+    if (valueURL.includes('cast') || valueURL.includes('reviews')) {
+      history.go(-1);
+    }
+
+    history.goBack();
+  }
+
   return (
     <>
+      <Button onClick={goBack}>&#10094; go back</Button>
       <div className={s.card}>
         <div className={s.imageContainer}>
           <img

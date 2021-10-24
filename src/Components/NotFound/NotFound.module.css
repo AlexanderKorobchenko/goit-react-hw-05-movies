@@ -1,0 +1,10 @@
+.text {
+  color: #aaa;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.image {
+  display: block;
+  margin: auto;
+}

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import s from './Reviews.module.css';
 
 function makeReviewsURL(id) {
@@ -36,5 +37,9 @@ function Reviews({ movieId }) {
     </ul>
   );
 }
+
+Reviews.protoType = {
+  movieId: PropTypes.string,
+};
 
 export default Reviews;

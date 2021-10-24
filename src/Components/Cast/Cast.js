@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import defaultImage from '../../images/no-image-available.jpg';
 import s from './Cast.module.css';
 
@@ -41,5 +42,9 @@ function Cast({ movieId }) {
     </ul>
   );
 }
+
+Cast.protoType = {
+  movieId: PropTypes.string,
+};
 
 export default Cast;
